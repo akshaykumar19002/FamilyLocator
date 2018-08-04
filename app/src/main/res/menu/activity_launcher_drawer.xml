@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_refresh"
+        android:icon="@drawable/search_ic"
+        android:title="Refresh Geofences" />
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_geofence_list"
+            android:icon="@drawable/list"
+            android:title="Geofence List" />
+        <item
+            android:id="@+id/nav_users_list"
+            android:icon="@drawable/list"
+            android:title="Users List" />
+        <item
+            android:id="@+id/nav_groups"
+            android:icon="@drawable/list"
+            android:title="Groups" />
+    </group>
+
+    <item android:id="@+id/send_location_drawer"
+        android:title="Send Location"/>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@drawable/feedback"
+                android:title="Feedback" />
+        </menu>
+    </item>
+
+    <item android:id="@+id/about_user_drawer"
+        android:title="About"/>
+
+    <item android:id="@+id/signout_drawer"
+        android:title="Signout"/>
+
+</menu>

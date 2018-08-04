@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Family Locator</string>
+    <string name="title_activity_main">Family Locator</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!-- Buttons strings -->
+    <string name="add_geofences">Add Locations</string>
+    <string name="remove_geofences">Remove Locations</string>
+
+    <!-- Transition type strings -->
+    <string name="geofence_transition_entered">Entered</string>
+    <string name="geofence_transition_exited">Exited</string>
+    <string name="unknown_geofence_transition">Unknown Transition</string>
+
+    <!-- Error strings -->
+    <string name="not_connected">GoogleApiClient no yet connected. Try again.</string>
+    <string name="geofence_not_available">Geofence service is not available now</string>
+    <string name="geofence_too_many_geofences">Your app has registered too many geofences</string>
+    <string name="geofence_too_many_pending_intents">
+        You have provided too many PendingIntents to the addGeofences() call
+    </string>
+    <string name="unknown_geofence_error">
+        Unknown error: the Geofence service is not available now
+    </string>
+    <string name="geofence_transition_invalid_type">
+        Geofence transition error: invalid transition type %1$d
+    </string>
+    <string name="geofence_transition_notification_text">Click to know more</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="update_email">Update Email</string>
+    <string name="change_pass">Change Password</string>
+    <string name="check_locations">Check Locations</string>
+    <string name="show_locations">Show Locations</string>
+    <string name="get_user_current_location">Get Current Location</string>
+    <string name="get_location_message">Get User Location</string>
+    <string name="open_in_map">Open in Google Maps</string>
+    <string name="notify_dialog_messsage">Do you want to send your location ?</string>
+    <string name="alert_dialog_yes">Yes</string>
+    <string name="alert_dialog_no">No</string>
+    <string name="update_email_id">Update Email</string>
+    <string name="cancel">Cancel</string>
+    <string name="signupFor">signupFormality</string>
+    <string name="exit">Exit</string>
+    <string name="acc_settings">Account Settings</string>
+    <string name="info_button_text">Info</string>
+    <string name="add">Add</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="autocomplete_hint">Enter place name or address</string>
+    <string name="selected_place">Last Selected Place:</string>
+    <string name="clear_text">Clear Text</string>
+
+    <!-- getString(String, Object...) does not support HTML tags directly, they need to be encoded first.
+    Original string: <b>%1$s</b><br/><i>Place Id: %2$s</i><br/>Address: %3$s<br/>Phone: %4$s<br/>Website: %5$s-->
+    <string name="place_details">&lt;b&gt;%1$s&lt;/b&gt;&lt;br/&gt;&lt;i&gt;Place Id: %2$s&lt;/i&gt;&lt;br/&gt;Address: %3$s&lt;br/&gt;Phone: %4$s&lt;br/&gt;Website: %5$s</string>
+    <string name="title_activity_launcher">Family Locator</string>
+
+    <string name="send_location_default_value">true</string>
+
+    <string name="title_activity_show_groups">ShowGroups</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="send_location_shared_preference">SendLocationSP</string>
+    <string name="email_shared_preference">EmailSP</string>
+    <string name="password_shared_preference">PasswordSP</string>
+    <string name="type_shared_preference">TypeSP</string>
+    <string name="uid_shared_preference">UidSP</string>
+</resources>

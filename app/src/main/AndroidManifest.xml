@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kumar.akshay.familylocator">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".LauncherActivity"
+            android:label="@string/title_activity_launcher"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.LauncherActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".UsersList"
+            android:parentActivityName=".LauncherActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".NotifyingLocation.NotifyActivity">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.NotifyActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Account.SettingsActivity"
+            android:parentActivityName=".LauncherActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kumar.akshay.familylocator.LauncherActivity" />
+
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.Account.SettingsActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Account.AddingUserImage">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.Account.AddingUserImage" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Maps.GeoFenceMapActivity"
+            android:parentActivityName=".LauncherActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kumar.akshay.familylocator.LauncherActivity" />
+
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.GeoFenceMapActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GeofenceListActivity"
+            android:parentActivityName=".LauncherActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kumar.akshay.familylocator.LauncherActivity" />
+
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.GeofenceListActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".Login.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.kumar.akshay.familylocator.Login.LoginActivity" />
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Account.AddingUserImage">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.Account.AddingUserImage" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".ShowGroups">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.ShowGroups" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyByL2O8tUJ5YcuX124K5GuZsbPbG2svIOw" />
+
+        <!-- AIzaSyDtvFkffzwGEyf02d_p40tbW14TivEwvqQ -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <service
+            android:name=".Services.GeoFenceTransitionsIntentService"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.Services.GeoFenceTransitionsIntentService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Services.NotifyService"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.Services.NotifyService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Services.UpdatingUserDetailsService"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.Services.UpdatingUserDetailsService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Services.GettingUserLocationService"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.Services.GettingUserLocationService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Services.GeofenceListService"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocatort.Services.GeofenceLisService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Services.GroupService"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.Services.GroupService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Services.AddingGroupToUser"
+            android:directBootAware="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.kumar.akshay.familylocator.Services.AddingGroupToUser" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

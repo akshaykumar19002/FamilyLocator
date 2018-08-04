@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/info_button"
+        android:icon="@mipmap/info_icon"
+        android:title="@string/info_button_text"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/update_email_menu"
+        android:title="@string/update_email" />
+    <item
+        android:id="@+id/reset_password_menu"
+        android:title="@string/reset_password"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/delete_account_menu"
+        android:title="@string/delete_account"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/sign_out_menu"
+        android:title="@string/sign_out"
+        app:showAsAction="never" />
+
+</menu>
